@@ -200,6 +200,29 @@ details p {
     height: auto;
 }
 
+/* Style the link within the h2 */
+.trailer h2 a {
+    text-decoration: none;
+    color: inherit;
+    background-color: rgb(218, 17, 17);
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Ensure it's above the iframe */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Adjust link style on hover */
+.trailer:hover h2 a {
+    opacity: 1; /* Show the anchor tag on hover */
+    background-color:rgb(218, 17, 17);
+}
+ 
+
 
 
 /* styling about us section */
