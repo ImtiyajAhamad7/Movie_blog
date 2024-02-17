@@ -295,80 +295,140 @@ form input[type="submit"]:hover {
 
 /* designing the footer */
 
+
 /* CSS for the footer section */
-/* CSS for the footer section */
-/* CSS for the footer section */
-/* CSS for the footer section */
-.footer {
-    background-color: black;
+footer {
+    background-color: rgb(0, 0, 0);
     color:#f3f3f3;
-    padding: 10px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
-.footer > * {
-    flex: 1 1 100%;
+
+/* section 1 css */
+.sec1{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+address{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
     margin-bottom: 20px;
 }
 
-.footer > .more-contact-detail,
-.footer > .links {
-    flex-basis: 40%;
-    margin-right: 20px;
+address h4{
+    color: rgb(218, 17, 17);
+    font-size: 20px;
+    margin-bottom: 10px;   
 }
 
-.more-contact-detail h4,
-.links h4 {
-    color:rgb(218, 17, 17);
-    margin-bottom: 10px;
-}
-
-.more-contact-detail p,
-.links ul,
-.section p {
-    list-style: none;
-    color: #fff;
+/* Style the paragraphs inside address */
+address p {
     margin-bottom: 5px;
-}
-
-.more-contact-detail a,
-.links ul li a {
-    color: #fff;
+  }
+  
+  /* Style the links inside paragraphs */
+  address a {
+    color: #f3f3f3;
     text-decoration: none;
-}
+  }
+  
+  /* Hover effect for links */
+  address a:hover {
+    text-decoration: underline;
+    color: red;
+  }
 
-.more-contact-detail a:hover,
-.links ul li a:hover {
-    text-decoration:2px  underline rgb(218, 17, 17) ;
-}
+  /* links css strats from here */
 
-.section {
-    flex-basis: 100%;
-    margin-top: 20px;
-}
-
-.section summary {
-    cursor: pointer;
-    color: #fff;
-    font-weight: bold;
+  /* Style the links container */
+.links {
+    line-height: 1.5;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  /* Style the heading inside links */
+  .links h4 {
+    color: rgb(218, 17, 17);
+    font-size: 20px;
     margin-bottom: 10px;
-}
+  }
+  
+  /* Style the list */
+  .links ul {
+    list-style-type: none;
+    
+  }
+  
+  /* Style the list items */
+  .links li {
+    margin-bottom: 5px;
+  }
+  
+  /* Style the links */
+  .links a {
+    color: #f3f3f3;
+    text-decoration: none;
+  }
+  
+  /* Hover effect for links */
+  .links a:hover {
+    text-decoration: 2px underline rgb(218, 17, 17);
+  }
 
-.section p {
-    margin-left: 20px;
-}
 
-.rights {
+  /* Style the icon container */
+.icon {
+    line-height: 1.5;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  /* Style the heading inside the icon container */
+  .icon h4 {
+    color: rgb(218, 17, 17);
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the container for arranging the icons */
+  .icon .iconarrange {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Style each individual icon */
+  .icon i {
+    font-size: 24px;
+    margin-right: 10px; /* Adjust spacing between icons */
+    color: #f3f3f3; 
+  }
+
+  /* privacy policy css */
+ #PrivacyPolicy{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+ }
+ section details p{
+    color: #f3f3f3;
+    line-height: 2.5;
+ }
+
+
+ /* rights sections */
+  .rights{
     text-align: center;
     background-color: rgb(218, 17, 17);
-    flex-basis: 100%;
     
-    color: #fff;
-    margin-bottom: 20px;
-}
-
+  }
+ 
+  
 
 
 
@@ -402,6 +462,18 @@ form input[type="submit"]:hover {
     #Post article {
         width: 100%; /* Set width to 100% for single column layout */
     }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+
+        /* text-overflow: initial; */
+    }
+    
+    .sec1{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 /* Media query for tablet devices */
@@ -427,6 +499,7 @@ form input[type="submit"]:hover {
     #Post article {
         width: 45%; /* Set width to 45% for two column layout */
     }
+    
 }
 
 
