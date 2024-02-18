@@ -1,525 +1,477 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: #f3f3f3;
-    margin: 0px 55px 0px 55px;
+body {
+  background-color: #f3f3f3;
+  margin: 0px 55px 0px 55px;
 }
 
 /* side scrollbar design */
-::-webkit-scrollbar{
-    width: 10px;
-
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-::-webkit-scrollbar-track{
-    background-color: #f3f3f3;
+::-webkit-scrollbar-track {
+  background-color: #f3f3f3;
 }
-::-webkit-scrollbar-thumb{
-    background-color: rgb(218, 17, 17);
-    border-radius: 7px;
+::-webkit-scrollbar-thumb {
+  background-color: rgb(218, 17, 17);
+  border-radius: 7px;
 }
-
 
 .header {
+  width: 100%;
+  background-color: #f3f3f3;
+  color: #0e0101;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
-    width: 100%;
-    background-color: #f3f3f3;
-    color: #0e0101; 
-    padding: 20px; 
-    display: flex; 
-    justify-content: space-around;
-    align-items: center;
-    
-} 
 /* designing horizontal line */
 hr {
-    border: none; /* Remove the default border */
-    height: 1px; /* Set the height of the line */
-    background-color: rgb(218, 17, 17); /* Set the color of the line */
-    margin: 10px 0; /* Add margin to separate it from other content */
-  }
-
-.title{
-     text-align: center;
+  border: none; /* Removing the default border */
+  height: 1px; /* Set the height of the line */
+  background-color: rgb(218, 17, 17);
+  margin: 10px 0; /* Add margin to separate it from other content */
 }
 
-.title h1, .title p{
-    font-family: 'Dancing Script', cursive;
-}
- 
-
-
-
-.nav ul{
-     list-style: none; 
-     display: flex; 
-    justify-content: flex-end; 
-} 
-
-.nav ul li{
-    margin-right: 20px;
-    
+.title {
+  text-align: center; /* Align the text in center of title nav */
 }
 
+.title h1,
+.title p {
+  font-family: "Dancing Script", cursive;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav ul li {
+  margin-right: 20px;
+}
 
 /* Apply the underline effect to the anchor tag */
 .nav ul li a {
-    position: relative;
-    color: black;
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.5s ease; /* Smooth transition for color and transform */
-  }
-  
-  /* Create an underline effect using a pseudo-element */
-  .nav ul li a::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: -5px; /* Adjust the position of the underline */
-    background-color: transparent; /* Initially transparent */
-    transition: background-color 0.3s ease; /* Smooth transition for background-color */
-  }
-  
-  /* Add  animation effect on hover */
-  .nav ul li a:hover::before {
-    background-color: rgb(218, 17, 17); /* Change the background color on hover */
-    animation: cinematic-animation 1s ease-in-out infinite alternate; /* Apply  animation */
-  }
-  
-  /* Define the cinematic animation keyframes */
-  @keyframes cinematic-animation {
-    0% {
-      transform: scaleX(1);
-    }
-    50% {
-      transform: scaleX(1.2); /* Scale up the underline */
-    }
-    100% {
-      transform: scaleX(1);
-    }
-  }
-  
-
-
-  /* main body styling starts from here */
- .blog-post-title{
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    margin-top: 5px;
-    margin-bottom: 5px;
- }
-
- /* Designing cards for blog post */
- #Post{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
- }
-
-
- article {
-    width: 30%; 
-    margin-bottom: 30px; 
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+  position: relative;
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.5s ease; /* Smooth transition for color and transform */
 }
 
+/* Create an underline effect using a pseudo-element */
+.nav ul li a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px; /* Adjusting  the position of the underline */
+  background-color: transparent; /* Initially transparent */
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+/* Adding  animation effect on hover */
+.nav ul li a:hover::before {
+  background-color: rgb(218, 17, 17); /* Change the background color on hover */
+  animation: cinematic-animation 1s ease-in-out infinite alternate; /* Apply  animation */
+}
+
+/* Define the  animation keyframes */
+@keyframes cinematic-animation {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.2); /* Scale up the underline */
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+/* main body of blog post styling starts from here */
+.blog-post-title {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* Designing cards for blog post */
+#Post {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+article {
+  width: 30%;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
 
 article img {
-    width: 100%;
-    height: 230px;
-    border-radius: 10px;
+  width: 100%;
+  height: 230px;
+  border-radius: 10px;
 }
 
 /* Styling the hover effect on the article card */
 article:hover {
-    transform: translateY(-5px); /* Move the card up slightly on hover */
+  transform: translateY(-5px); /* Move the card up slightly on hover */
 }
 
 /* Styling the movie title overlay */
 article h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.5s ease-in-out;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    color: black;
-    width: 100%; /* Added to ensure the overlay covers the entire card */
-    height: 100%; /* Added to ensure the overlay covers the entire card */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease-in-out;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  color: black;
+  width: 100%; /* by making width 100% im ensuring that overlay covers the entire card */
+  height: 100%; 
 }
 
 /* Styling the hover effect for the movie title overlay */
 article .movie-card:hover h2 {
-    color: rgb(218, 17, 17);
-    opacity: 1; /* Show the overlay on hover */
-    background-color: rgba(233, 233, 233, 0.8); /* Background color for the overlay */
+  color: rgb(218, 17, 17);
+  opacity: 1; /* Show the overlay on hover */
+  background-color: rgba(233, 233,233, 0.8); /* Background color for the overlay */
 }
 
-/* Styling the summary section in the About Us */
+/* Styling the summary section  */
 details {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
-/* Styling the summary toggle in the About Us */
+/* Styling the summary  */
 details summary {
-    cursor: pointer;
-    color: rgb(218, 17, 17);
-    font-weight: bold;
+  cursor: pointer;
+  color: rgb(218, 17, 17);
+  font-weight: bold;
 }
 
-/* Styling the details content in the About Us */
+/* Styling the details content  */
 details p {
-    margin-top: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px; /* Add spacing below each paragraph */
+  line-height: 1.6; /* Increase line height for readability */
+
 }
 
 .movie-card {
-    position: relative;
+  position: relative;
 }
 
 /* CSS for the trailer section */
 .trailer {
-    position: relative;
+  position: relative;
 }
 
 .trailer h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    color: #f3f3f3;
-    z-index: 1; /* Ensure it's above the iframe */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  color: #f3f3f3;
+  z-index: 1; /* Ensure it's above the iframe */
 }
 
 /* Show the h2 element on hover */
 .trailer:hover h2 {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* Styling for the iframe */
 .trailer iframe {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /* Style the link within the h2 */
 .trailer h2 a {
-    text-decoration: none;
-    color: inherit;
-    background-color: rgb(218, 17, 17);
-    padding: 10px 20px;
-    border-radius: 7px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2; /* Ensure it's above the iframe */
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.5s ease-in-out;
+  text-decoration: none;
+  color: inherit;
+  background-color: rgb(218, 17, 17);
+  padding: 10px 20px;
+  border-radius: 7px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Ensure it's above the iframe */
+  opacity: 0; 
+  transition: opacity 0.5s ease-in-out;
 }
 
 /* Adjust link style on hover */
 .trailer:hover h2 a {
-    opacity: 1; /* Show the anchor tag on hover */
-    background-color:rgb(218, 17, 17);
+  opacity: 1; /* Showing the anchor tag on hover */
+  background-color: rgb(218, 17, 17);
 }
- 
-
-
 
 /* styling about us section */
 
 #About-us {
-    padding: 50px 20px; /* Add padding around the content */
-    background-color: #f3f3f3; /* Light gray background */
+  padding: 50px 20px; /* Add padding around the content */
+  background-color: #f3f3f3; /* Light gray background */
 }
 
 /* Styling the heading */
 #About-us h2 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 36px; /* Larger font size for the heading */
-    margin-bottom: 30px; /* Add spacing below the heading */
-    text-align: center; /* Center-align the heading */
+  font-family: "Open Sans", sans-serif;
+  font-size: 36px; /* Larger font size for the heading */
+  margin-bottom: 30px; /* Add spacing below the heading */
+  text-align: center; /* Center-align the heading */
 }
 
-/* Styling the details summary */
-details summary {
-    font-weight: bold; /* Bold text for summary */
-    cursor: pointer; /* Change cursor on hover */
-    margin-bottom: 20px; /* Add spacing below each summary */
-}
 
-/* Styling the details content */
-details p {
-    margin-bottom: 20px; /* Add spacing below each paragraph */
-    line-height: 1.6; /* Increase line height for readability */
-}
+
 
 /* styling the form */
 
-
 form input[type="email"],
 form textarea {
-    width: 100%; /* Make inputs full width */
-    padding: 10px; /* Add padding */
-    margin-bottom: 20px; /* Add spacing between inputs */
-    border: 1px solid #ccc; /* Add border */
-    border-radius: 5px; /* Add border radius */
-    transition: border-color 1s ease-in-out; /* Add transition for border color */
+  width: 100%; /* Make inputs full width */
+  padding: 10px; /* Add padding */
+  margin-bottom: 20px; /* Add spacing between inputs */
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 5px; /* Add border radius */
+  transition: border-color 1s ease-in-out; /* Add transition for border color */
 }
 
 /* Change border color on input focus */
 form input[type="email"]:focus,
 form textarea:focus {
-    border-color:#f3f3f3; /* Change border color on focus */
+  border-color: #f3f3f3; /* Change border color on focus */
 }
 
 /* Styling the form submit button */
 form input[type="submit"] {
-    width: 100%; /* Make button full width */
-    padding: 10px; /* Add padding */
-    background-color: #007bff; /* Button background color */
-    color: #f3f3f3; /* Button text color */
-    border: none; /* Remove button border */
-    border-radius: 5px; /* Add border radius */
-    cursor: pointer; /* Change cursor to pointer */
-    transition: background-color 0.3s ease-in-out; /* Add transition for background color */
+  width: 100%;   padding: 10px; 
+  background-color: #007bff; 
+  color: #f3f3f3; 
+  border: none; 
+  border-radius: 5px;
+  cursor: pointer; 
+  transition: background-color 0.3s ease-in-out; 
 }
 
 /* Change button background color on hover */
 form input[type="submit"]:hover {
-    background-color: rgb(218, 17, 17); /* Darker shade on hover */
+  background-color: rgb(218, 17, 17);
 }
-
-
 
 /* designing the footer */
 
-
 /* CSS for the footer section */
 footer {
-    background-color:black;
-    color:#f3f3f3;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
+  background-color: black;
+  color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
-
 
 /* section 1 css */
-.sec1{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    display: flex;
-    justify-content: space-around;
+.sec1 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-around;
 }
 
-address{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 20px;
+address {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
 
-address h4{
-    color: rgb(218, 17, 17);
-    font-size: 20px;
-    margin-bottom: 10px;   
+address h4 {
+  color: rgb(218, 17, 17);
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 /* Style the paragraphs inside address */
 address p {
-    margin-bottom: 5px;
-  }
-  
-  /* Style the links inside paragraphs */
-  address a {
-    color: #f3f3f3;
-    text-decoration: none;
-  }
+  margin-bottom: 5px;
+}
 
-  
-  
-  /* Hover effect for links */
-  address a:hover {
-    text-decoration: 2px solid underline rgb(218, 17, 17);
-    
-  }
+/* Style the links inside paragraphs */
+address a {
+  color: #f3f3f3;
+  text-decoration: none;
+}
 
-  /* links css strats from here */
+/* Hover effect for links */
+address a:hover {
+  text-decoration: 2px solid underline rgb(218, 17, 17);
+}
+
+/* links css strats from here */
 
 .links {
-    line-height: 1.5;
-    font-family: 'Open Sans', sans-serif;
-  }
-  
-  /* Style the heading inside links */
-  .links h4 {
-    color: rgb(218, 17, 17);
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
-  /* Style the list */
-  .links ul {
-    list-style-type: none;
-    
-  }
-  
-  /* Style the list items */
-  .links li {
-    margin-bottom: 5px;
-  }
-  
-  /* Style the links */
-  .links a {
-    color: #f3f3f3;
-    text-decoration: none;
-  }
-  
-  /* Hover effect for links */
-  .links a:hover {
-    text-decoration: 2px underline rgb(218, 17, 17);
-  }
+  line-height: 1.5;
+  font-family: "Open Sans", sans-serif;
+}
 
+/* Style the heading inside links */
+.links h4 {
+  color: rgb(218, 17, 17);
+  font-size: 20px;
+  margin-bottom: 10px;
+}
 
-  /* Style the icon container */
+/* Style the list */
+.links ul {
+  list-style-type: none;
+}
+
+/* Style the list items */
+.links li {
+  margin-bottom: 5px;
+}
+
+/* Style the links */
+.links a {
+  color: #f3f3f3;
+  text-decoration: none;
+}
+
+/* Hover effect for links */
+.links a:hover {
+  text-decoration: 2px underline rgb(218, 17, 17);
+}
+
+/* Style the icon container */
 .icon {
-    line-height: 1.5;
-    font-family: 'Open Sans', sans-serif;
-  }
-  
-  /* Style the heading inside the icon container */
-  .icon h4 {
-    color: rgb(218, 17, 17);
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
-  /* Style the container for arranging the icons */
-  .icon .iconarrange {
-    display: flex;
-    align-items: center;
-  }
-  
-  /* Style each individual icon */
-  .icon i {
-    font-size: 24px;
-    margin-right: 10px; /* Adjust spacing between icons */
-    color: #f3f3f3; 
-  }
+  line-height: 1.5;
+  font-family: "Open Sans", sans-serif;
+}
 
-  /* privacy policy css */
- #PrivacyPolicy{
-    margin: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px;
- }
- #PrivacyPolicy section details p{
-    color: #f3f3f3;
-    line-height: 2.5;
- }
+/* Style the heading inside the icon container */
+.icon h4 {
+  color: rgb(218, 17, 17);
+  font-size: 20px;
+  margin-bottom: 10px;
+}
 
+/* Style the container for arranging the icons */
+.icon .iconarrange {
+  display: flex;
+  align-items: center;
+}
 
- /* rights sections */
-  .rights{
-    text-align: center;
-    background-color: rgb(218, 17, 17);
-    
-  }
- 
-  
+/* Style each individual icon */
+.icon i {
+  font-size: 24px;
+  margin-right: 10px; /* Adjust spacing between icons */
+  color: #f3f3f3;
+}
 
+/* privacy policy css */
+#PrivacyPolicy {
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#PrivacyPolicy section details p {
+  color: #f3f3f3;
+  line-height: 2.5;
+}
 
-
-
+/* rights sections */
+.rights {
+  text-align: center;
+  background-color: rgb(218, 17, 17);
+}
 
 /* Media query for mobile devices */
 @media only screen and (max-width: 600px) {
-    body {
-        margin: 0; /* Resetting margin for smaller screens */
-    }
+  body {
+    margin: 0; /* Resetting margin for smaller screens */
+  }
 
-    .header {
-        margin: 0; /* Resetting margin for smaller screens */
-        flex-direction: column; /* Stack items vertically */
-        padding: 10px; /* Adjust padding for smaller screens */
-    }
+  .header {
+    margin: 0; /* Resetting margin for smaller screens */
+    flex-direction: column; /* Align items vertically */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
 
-    .nav ul {
-        justify-content: center; /* Center-align navigation items */
-    }
+  .nav ul {
+    justify-content: center; /* Center-align navigation items */
+  }
 
-    .nav ul li {
-        margin: 0 10px; /* Adjust margin for smaller screens */
-    }
+  .nav ul li {
+    margin: 0 10px; /* Adjust margin for smaller screens */
+  }
 
-    .title h1 {
-        font-size: 24px; /* Adjust font size for smaller screens */
-    }
+  .title h1 {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
 
-    /* Adjust styling for blog post cards */
-    #Post article {
-        width: 100%; /* Set width to 100% for single column layout */
-    }
+  /* Adjust styling for blog post cards */
+  #Post article {
+    width: 100%; /* Set width to 100% for Mobile layout */
+  }
 
-    footer{
-        display: flex;
-        flex-direction: column;
+  footer {
+    display: flex;
+    flex-direction: column;  /* arranged footer elements in column for mobile */
+  }
 
-        /* text-overflow: initial; */
-    }
-    
-    .sec1{
-        display: flex;
-        flex-direction: column;
-    }
+  .sec1 {
+    display: flex;
+    flex-direction: column;    /* makes section-1 arranged in column for clear visibility in mobile screen */
+  }
 }
 
 /* Media query for tablet devices */
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
-    .header {
-        margin: 0; /* Resetting margin for tablet screens */
-        padding: 15px; /* Adjust padding for tablet screens */
-    }
+  .header {
+    margin: 0; /* Resetting margin for tablet screens */
+    padding: 15px; /* Adjust padding for tablet screens */
+  }
 
-    .nav ul {
-        justify-content: center; /* Center-align navigation items */
-    }
+  .nav ul {
+    justify-content: center; /* Center-align navigation items */
+  }
 
-    .nav ul li {
-        margin: 0 15px; /* Adjust margin for tablet screens */
-    }
+  .nav ul li {
+    margin: 0 15px; /* Adjust margin for tablet screens */
+  }
 
-    .title h1 {
-        font-size: 28px; /* Adjust font size for tablet screens */
-    }
+  .title h1 {
+    font-size: 28px; /* Adjust font size for tablet screens */
+  }
 
-    /* Adjust styling for blog post cards */
-    #Post article {
-        width: 45%; /* Set width to 45% for two column layout */
-    }
-    
+  /* Adjust styling for blog post cards */
+  #Post article {
+    width: 45%; /* Set width to 45% for two column layout */
+  }
 }
-
-
-
- 
-  
