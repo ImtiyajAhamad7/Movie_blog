@@ -133,6 +133,7 @@ article:hover {
   transform: translateY(-5px); /* Move the card up slightly on hover */
 }
 
+
 /* Styling the movie title overlay */
 article h2 {
   position: absolute;
@@ -143,14 +144,13 @@ article h2 {
   transition: opacity 0.5s ease-in-out;
   text-align: center;
   font-family: "Open Sans", sans-serif;
-  color: black;
+  color: rgb(218, 17, 17);
   width: 100%; /* by making width 100% im ensuring that overlay covers the entire card */
   height: 100%; 
 }
 
 /* Styling the hover effect for the movie title overlay */
 article .movie-card:hover h2 {
-  color: rgb(218, 17, 17);
   opacity: 1; /* Show the overlay on hover */
   background-color: rgba(233, 233,233, 0.8); /* Background color for the overlay */
 }
